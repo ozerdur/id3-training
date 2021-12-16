@@ -15,6 +15,10 @@ export default class Page1 extends Page1Design {
             this.router.push('/pages/page2', { message: 'Hello World!' });
         };
     }
+
+    initComponent(){
+        this.flProfile.labelText = "Smartface & Turkcell & id3";
+    }
 }
 
 /**
@@ -23,6 +27,7 @@ export default class Page1 extends Page1Design {
  */
 function onShow(this: Page1, superOnShow: () => void) {
     superOnShow();
+    this.initComponent();
     this.headerBar.titleLayout.applyLayout();
 }
 

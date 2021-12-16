@@ -8,7 +8,7 @@
 				"children": [
 					"42b807d1",
 					"b7d28cff",
-					"980522a9",
+					"1c67-c477-47d0-775c",
 					"9e49-7873-afba-472b"
 				],
 				"isRemovable": true,
@@ -29,8 +29,7 @@
 				"paddingRight": 16,
 				"safeAreaEnabled": true
 			},
-			"version": "6.15.1",
-			"degree": 0
+			"version": "6.15.1"
 		},
 		{
 			"className": ".sf-statusBar",
@@ -44,8 +43,7 @@
 			"type": "StatusBar",
 			"userProps": {
 				"visible": true
-			},
-			"degree": 1
+			}
 		},
 		{
 			"className": ".sf-headerBar",
@@ -61,46 +59,36 @@
 			"userProps": {
 				"title": "Page1",
 				"visible": true
-			},
-			"degree": 1
+			}
 		},
 		{
-			"className": ".sf-label",
-			"id": "980522a9",
+			"className": ".sf-flexLayout .flProfile",
+			"hiddenComponent": false,
+			"id": "1c67-c477-47d0-775c",
 			"props": {
-				"autoHeight": 39.325842696629216,
 				"children": [],
-				"name": "lbl",
+				"name": "flProfile",
 				"parent": "e891b86d",
-				"text": "Page1",
 				"usePageVariable": true
 			},
-			"type": "Label",
-			"userProps": {
-				"autoHeight": 39.325842696629216,
-				"backgroundColor": "rgba( 255, 255, 255, 0 )",
-				"flexProps": {
-					"marginLeft": 20,
-					"marginRight": 20,
-					"alignSelf": "STRETCH",
-					"flexGrow": 1
-				},
-				"font": {
-					"size": 32,
-					"bold": false,
-					"italic": false,
-					"family": "SFProText",
-					"style": "Regular"
-				},
-				"height": 600,
-				"multiline": true,
-				"text": "Page1",
-				"textAlignment": "MIDCENTER",
-				"textColor": "rgba( 210, 210, 210, 1 )",
-				"usePageVariable": true,
-				"testId": "L-42gAben"
+			"source": {
+				"page": "__library__",
+				"type": "flProfile",
+				"id": "3f31-17c3-d22f-89b5"
 			},
-			"degree": 1
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"testId": "gkeFRRhM-",
+				"top": 0,
+				"usePageVariable": true
+			}
 		},
 		{
 			"className": ".sf-button",
@@ -120,12 +108,11 @@
 					"alignSelf": "AUTO",
 					"positionType": "RELATIVE"
 				},
+				"testId": "ucEDBF6ZMB",
 				"text": "Next Page",
 				"usePageVariable": true,
-				"width": null,
-				"testId": "ucEDBF6ZMB"
-			},
-			"degree": 1
+				"width": null
+			}
 		}
 	]
 }

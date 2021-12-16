@@ -1,0 +1,23 @@
+{
+	".flProfile": {
+		"height": 65,
+		"flexProps": {
+			"flexDirection": "ROW"
+		},
+		"paddingLeft": 10,
+		"paddingRight": 10,
+		"&-lbProfile": {
+			"width": null,
+			"height": null,
+			"marginLeft": 15,
+			"flexProps": {
+				"flexGrow": 1
+			}
+		},
+		"&-imgIcon": {
+			"width": 60,
+			"height": null,
+			"imageFillType": "ASPECTFIT"
+		}
+	}
+}
