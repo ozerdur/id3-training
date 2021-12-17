@@ -1,4 +1,7 @@
 import FlProfileDesign from 'generated/my-components/FlProfile';
+import Image from '@smartface/native/ui/image';
+import ImageView from '@smartface/native/ui/imageview';
+import { getCombinedStyle } from '@smartface/extension-utils/lib/getCombinedStyle';
 
 export default class FlProfile extends FlProfileDesign {
 	pageName?: string | undefined;
@@ -18,7 +21,14 @@ export default class FlProfile extends FlProfileDesign {
 
     set imageURL(value:string){
         this.imgIcon.loadFromUrl({
-            url: value
+            url: value,
+            onSuccess: ()=>{
+                //@ts-ignore
+                if(this.imgIcon?.android.round){
+                    //@ts-ignore
+                    this.imgIcon.android.round(30);
+                }
+            }
         });
         this._imgUrl = value;
     }

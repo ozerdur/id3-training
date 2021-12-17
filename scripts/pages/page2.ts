@@ -7,20 +7,64 @@ import componentContextPatch from '@smartface/contx/lib/smartface/componentConte
 import Color from '@smartface/native/ui/color';
 import System from '@smartface/native/device/system';
 
+//import {getCombinedStyle} from '@smartface/extension-utils/lib/getCombinedStyle';
+//import Simple_listviewitem from 'components/Simple_listviewitem';
+import LviProfile from 'components/LviProfile';
+import * as RandomServiceUser from 'api/randomuser';
+
+type AsyncReturnType<T extends (...args:any) => any> =
+T extends (...args:any) => Promise<infer U> ? U :
+T extends (...args:any) => infer U ? U : 
+any;
+
+
+
+
 export default class Page2 extends Page2Design {
   router: any;
   routeData: any;
   parentController: any;
+  dataList: AsyncReturnType<typeof RandomServiceUser.getUsers>['results'] = [];
+  
+ // dataList = Array(10).fill(null).slice(1).map((_, index) => ({ text: `id3 & Smartface = ${index}`}));
   constructor() {
     super();
     // Overrides super.onShow method
     this.onShow = onShow.bind(this, this.onShow.bind(this));
     // Overrides super.onLoad method
     this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
-    touch.addPressEvent(this.btnSayHello, () => {
-      alert('Hello World!');
-    });
+
   }
+
+  initlistView() {
+        this.lvMain.onRowHeight = (index:number)=>{
+            return LviProfile.getHeight();
+        }
+        
+        this.lvMain.onRowBind = (item: LviProfile, index: number) => {
+            item.labelText = this.dataList[index]?.name?.first || '';
+            item.imageURL = this.dataList[index]?.picture.large;
+        }
+
+        this.lvMain.onPullRefresh = () => {
+            //this.refreshListView();
+            this.lvMain.stopRefresh();
+        };
+        
+  }
+
+  refreshListView() {
+        this.lvMain.itemCount = this.dataList.length;
+        this.lvMain.refreshData();
+  }
+ 
+  async serviceCall(){
+      const result = await RandomServiceUser.getUsers(10);
+      console.log(result);
+      this.dataList =result.results;
+      this.refreshListView();
+  }
+
 }
 
 /**
@@ -31,6 +75,7 @@ function onShow(this: Page2, superOnShow: () => void) {
   superOnShow();
   this.headerBar.titleLayout.applyLayout();
   this.routeData && console.info(this.routeData.message);
+  this.serviceCall();
 }
 
 /**
@@ -39,6 +84,7 @@ function onShow(this: Page2, superOnShow: () => void) {
  */
 function onLoad(this: Page2, superOnLoad: () => void) {
   superOnLoad();
+  
   let headerBar;
   this.headerBar.titleLayout = new PageTitleLayout();
   componentContextPatch(this.headerBar.titleLayout, 'titleLayout');
@@ -64,4 +110,7 @@ function onLoad(this: Page2, superOnLoad: () => void) {
     headerBar = this.parentController.headerBar;
   }
   headerBar.itemColor = Color.WHITE;
+  
+  this.initlistView();
+
 }

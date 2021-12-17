@@ -1,0 +1,15 @@
+{
+	".page2": {
+		"paddingLeft": 0,
+		"paddingRight": 0,
+		"paddingBottom": 0,
+		"paddingTop": 0
+	},
+	"#page2": {
+		"&-lvMain": {
+			"flexProps": {
+				"flexGrow": 1
+			}
+		}
+	}
+}

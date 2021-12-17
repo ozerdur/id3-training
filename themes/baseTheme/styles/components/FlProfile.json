@@ -1,8 +1,8 @@
 {
 	".flProfile": {
-		"height": 65,
 		"flexProps": {
-			"flexDirection": "ROW"
+			"flexDirection": "ROW",
+			"flexGrow": 1
 		},
 		"paddingLeft": 10,
 		"paddingRight": 10,
@@ -17,7 +17,8 @@
 		"&-imgIcon": {
 			"width": 60,
 			"height": null,
-			"imageFillType": "ASPECTFIT"
+			"imageFillType": "ASPECTFIT",
+			"borderRadius": 30
 		}
 	}
 }
