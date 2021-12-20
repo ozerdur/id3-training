@@ -1,0 +1,8 @@
+{
+	".flProfileDetailItem": {
+		"flexProps": {
+			"flexDirection": "ROW",
+			"flexGrow": 1
+		}
+	}
+}

@@ -1,8 +1,7 @@
 {
 	".flProfile": {
 		"flexProps": {
-			"flexDirection": "ROW",
-			"flexGrow": 1
+			"flexDirection": "ROW"
 		},
 		"paddingLeft": 10,
 		"paddingRight": 10,
@@ -19,6 +18,18 @@
 			"height": null,
 			"imageFillType": "ASPECTFIT",
 			"borderRadius": 30
-		}
+		},
+		"&-lbValue": {
+			"flexProps": {
+				"flexGrow": 1
+			}
+		},
+		"&-lbField": {
+			"flexProps": {
+				"flexGrow": 1
+			}
+		},
+		"null": "30",
+		"height": 65
 	}
 }

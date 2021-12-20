@@ -1,0 +1,67 @@
+{
+	"components": [
+		{
+			"className": ".sf-flexLayout .flProfileDetailItem",
+			"hiddenComponent": true,
+			"id": "4c6e-7aec-15dd-d2eb",
+			"props": {
+				"children": [
+					"3d23-3ed9-3de0-044a",
+					"2871-ffea-d140-d391"
+				],
+				"name": "flProfileDetailItem",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {},
+				"left": "2.22",
+				"testId": "7A8njxUtT",
+				"top": "284.44"
+			}
+		},
+		{
+			"className": ".sf-label .flProfile-lbField",
+			"id": "3d23-3ed9-3de0-044a",
+			"props": {
+				"children": [],
+				"name": "field",
+				"parent": "4c6e-7aec-15dd-d2eb",
+				"text": "label1",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"testId": "k1py2wQTL",
+				"text": "label1",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label .flProfile-lbValue",
+			"id": "2871-ffea-d140-d391",
+			"props": {
+				"children": [],
+				"name": "value",
+				"parent": "4c6e-7aec-15dd-d2eb",
+				"text": "label2",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"testId": "eGDxNw6HY",
+				"text": "label2",
+				"usePageVariable": true
+			}
+		}
+	]
+}

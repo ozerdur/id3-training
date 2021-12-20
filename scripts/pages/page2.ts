@@ -11,6 +11,7 @@ import System from '@smartface/native/device/system';
 //import Simple_listviewitem from 'components/Simple_listviewitem';
 import LviProfile from 'components/LviProfile';
 import * as RandomServiceUser from 'api/randomuser';
+import { isTemplateExpression } from 'typescript';
 
 type AsyncReturnType<T extends (...args:any) => any> =
 T extends (...args:any) => Promise<infer U> ? U :
@@ -50,6 +51,10 @@ export default class Page2 extends Page2Design {
             //this.refreshListView();
             this.lvMain.stopRefresh();
         };
+
+        this.lvMain.onRowSelected= (item: LviProfile, index: number) => {
+            this.router.push('/pages/profileDetail', { userData: this.dataList[index]});
+        }
         
   }
 
@@ -60,7 +65,7 @@ export default class Page2 extends Page2Design {
  
   async serviceCall(){
       const result = await RandomServiceUser.getUsers(10);
-      console.log(result);
+      ///console.log(result);
       this.dataList =result.results;
       this.refreshListView();
   }

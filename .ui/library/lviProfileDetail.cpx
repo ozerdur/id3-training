@@ -3,12 +3,12 @@
 		{
 			"className": ".sf-listViewItem .lvProfile",
 			"hiddenComponent": true,
-			"id": "92d3-b433-b4d6-ae10",
+			"id": "f5cd-4729-e4eb-def6",
 			"props": {
 				"children": [
-					"836e-ba4a-0a48-51f9"
+					"4e33-8385-8273-09a4"
 				],
-				"name": "lviProfile",
+				"name": "lviProfileDetail",
 				"parent": "57f4-201f-4bfc-5fc6"
 			},
 			"source": {
@@ -16,23 +16,28 @@
 			},
 			"type": "ListViewItem",
 			"userProps": {
-				"testId": "gF4TXFrai"
+				"flexProps": {},
+				"height": "62.22",
+				"left": "4.44",
+				"testId": "gF4TXFrai",
+				"top": "331.11",
+				"width": "375.56"
 			}
 		},
 		{
-			"className": ".sf-flexLayout .flProfile",
+			"className": ".sf-flexLayout .flProfileDetailItem",
 			"hiddenComponent": false,
-			"id": "836e-ba4a-0a48-51f9",
+			"id": "4e33-8385-8273-09a4",
 			"props": {
 				"children": [],
-				"name": "flProfile",
-				"parent": "92d3-b433-b4d6-ae10",
+				"name": "flProfileDetailItem",
+				"parent": "f5cd-4729-e4eb-def6",
 				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__",
-				"type": "flProfile",
-				"id": "3f31-17c3-d22f-89b5"
+				"type": "flProfileDetailItem",
+				"id": "4c6e-7aec-15dd-d2eb"
 			},
 			"type": "FlexLayout",
 			"userProps": {
@@ -43,7 +48,7 @@
 					"positionType": "RELATIVE"
 				},
 				"left": 0,
-				"testId": "Tjn59xYVJ",
+				"testId": "7A8njxUtT",
 				"top": 0,
 				"usePageVariable": true
 			}

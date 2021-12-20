@@ -1,0 +1,125 @@
+{
+	"components": [
+		{
+			"className": ".sf-page",
+			"id": "172a-8b86-3db2-7f39",
+			"initialized": true,
+			"props": {
+				"children": [
+					"a774-a454-4beb-5b12",
+					"1480-2680-ce8e-c76a",
+					"5475-b16a-61e1-1597",
+					"572b-08b2-0ad7-4a2d"
+				],
+				"name": "profileDetail",
+				"orientation": "PORTRAIT",
+				"parent": null
+			},
+			"type": "Page",
+			"userProps": {},
+			"version": "0.0.1.a"
+		},
+		{
+			"className": ".sf-statusBar",
+			"id": "a774-a454-4beb-5b12",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "172a-8b86-3db2-7f39"
+			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-headerBar",
+			"id": "1480-2680-ce8e-c76a",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "172a-8b86-3db2-7f39",
+				"title": "profileDetail"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "profileDetail"
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flProfile",
+			"hiddenComponent": false,
+			"id": "5475-b16a-61e1-1597",
+			"props": {
+				"children": [],
+				"name": "flProfile",
+				"parent": "172a-8b86-3db2-7f39",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "flProfile",
+				"id": "3f31-17c3-d22f-89b5"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"testId": "RJtbG38US",
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-listView",
+			"id": "572b-08b2-0ad7-4a2d",
+			"props": {
+				"children": [
+					"cd4f-f599-2434-065f"
+				],
+				"name": "lvMain",
+				"parent": "172a-8b86-3db2-7f39",
+				"usePageVariable": true
+			},
+			"type": "ListView",
+			"userProps": {
+				"testId": "vgpwCesrM",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-listViewItem .lvProfile",
+			"hiddenComponent": false,
+			"id": "cd4f-f599-2434-065f",
+			"props": {
+				"children": [],
+				"name": "lviProfileDetail",
+				"parent": "572b-08b2-0ad7-4a2d"
+			},
+			"source": {
+				"page": "__library__",
+				"type": "lviProfileDetail",
+				"id": "f5cd-4729-e4eb-def6"
+			},
+			"type": "ListViewItem",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"height": "62.22",
+				"left": 0,
+				"testId": "gF4TXFrai",
+				"top": 0,
+				"width": "375.56"
+			}
+		}
+	]
+}
